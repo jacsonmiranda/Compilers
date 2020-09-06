@@ -1,0 +1,8 @@
+%{
+#include <stdio.h>
+%}
+
+%%
+stop printf("Stop command re\n");
+start printf("Start command re\n");
+%%
