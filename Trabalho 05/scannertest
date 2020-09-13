@@ -1,0 +1,20 @@
+%{
+	#include "stdio.h"
+	#include "hash.h"
+	int linha = 0;
+%}
+
+%%
+
+\n linha++;
+
+[a-zA-Z]+ {
+	printf("Palavra encontrada: %s, Linha: %d \n", yytext, linha);
+}
+
+%%
+
+int main() {
+	yylex();
+	return 0;
+}
